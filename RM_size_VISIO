@@ -1,0 +1,8 @@
+'Удаление размеров в VISIO
+Public Sub x()
+On Error Resume Next
+For i = 1 To ActiveWindow.Selection.Count
+Set shp = ActiveWindow.Selection(i)
+shp.Cells("user.visBESelected").FormulaForceU = 0      '  "GUARD(0)"
+Next i
+End Sub
