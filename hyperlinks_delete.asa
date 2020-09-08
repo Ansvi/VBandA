@@ -1,0 +1,7 @@
+'Удаление гиперссылок
+Sub RemoveHyperlinks()
+While ActiveDocument.Hyperlinks.Count > 0
+ActiveDocument.Hyperlinks(1).Delete
+Wend
+Application.Options.AutoFormatAsYouTypeReplaceHyperlinks = False
+End Sub
